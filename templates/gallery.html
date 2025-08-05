@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <meta http-equiv="refresh" content="5">
+</head>
+<body>
+    <img id="galleryImage" src="" alt="Gallery Image">
+    
+    <script>
+        const images = [
+            "static/images/lila.jpg",
+            "static/images/lila2.jpg",
+            "static/images/lindsey.jpg"
+        ]; // Add more images here
+
+        let index = 0;
+        function changeImage() {
+            document.getElementById("galleryImage").src = images[index];
+            index = (index + 1) % images.length;
+        }
+        changeImage();
+        setInterval(changeImage, 5000); // Change image every 5 seconds
+    </script>
+</body>
+</html>

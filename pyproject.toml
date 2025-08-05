@@ -1,0 +1,12 @@
+[project]
+name = "webex-status"
+version = "0.1.0"
+description = "A Flask web server that provides webex status when a user is in a meeting, and displays full-screen images when they are not. "
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "flask>=3.1.1",
+    "httpx>=0.28.1",
+    "ipython>=9.3.0",
+]
